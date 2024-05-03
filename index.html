@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <title>Kriptografi - RC4</title>
+  </head>
+  <body class="bg-no-repeat bg-cover bg-center">
+    <div
+      class="flex justify-center items-center w-full h-20 bg-transparent backdrop-brightness-50 backdrop-blur-md shadow-xl fixed top-0 z-10"
+    >
+      <h1 class="my-auto text-primary text-4xl font-bold italic">
+        <span class="text-slate-200">ENKRIPSI</span> DEKRIPSI
+      </h1>
+    </div>
+
+    <div
+      class="container mx-auto my-36 flex justify-center items-center flex-wrap W-1/2"
+    >
+      <!-- CARD -->
+      <div
+        id="card"
+        class="w-full lg:w-1/2 md:w-4/5 mx-4 bg-sate-300 px-10 pt-10 rounded-xl shadow-2xl"
+      >
+        <div>
+          <img
+            src="img/logo.png"
+            alt="lock-logo"
+            class="w-52 h-52 mx-auto mt-6 object-cover scale-90"
+          />
+          <h1 class="text-3xl font-bold text-primary text-center">
+            <span class="text-dark">Kriptografi</span> RC4
+          </h1>
+          <p
+            class="text-lg font-extralight text-dark text-center mt-3 mb-10 opacity-80"
+          >
+            Ayo kawan 🤙, lindungi pesan anda dengan enkripsi RC4!
+          </p>
+        </div>
+        <form action="" method="post">
+          <!-- Input -->
+          <div class="mb-5">
+            <!-- PESAN INPUT -->
+            <label
+              for="pesan"
+              class="w-full block text-xl font-semibold text-dark mb-2"
+              >Pesan</label
+            >
+            <textarea
+              name="pesan"
+              id="pesan"
+              minlength="4"
+              class="w-full h-32 text-lg bg-slate-300 p-3 text-dark resize-none rounded-md focus:outline-dark"
+              placeholder="Masukan Pesan..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="mb-8 relative box-border">
+            <!-- KEY input -->
+            <label
+              for="key"
+              class="w-full block text-xl font-semibold text-dark mb-2"
+              >Kunci</label
+            >
+
+            <input
+              type="text"
+              name="key"
+              id="key"
+              class="w-full pr-16 text-lg bg-slate-300 p-3 text-dark rounded-md focus:outline-dark"
+              placeholder="Masukan Kunci"
+              required
+            />
+            <span class="absolute translate-y-1/2 right-6"
+              ><img
+                class="w-6 h-6 opacity-50"
+                src="img/key-icon.png"
+                alt="key-logo"
+            /></span>
+          </div>
+
+          <!-- Button -->
+          <div class="mb-10 flex justify-center sm:justify-end gap-4">
+            <!-- ENKRIPSI BUTTON -->
+            <button
+              id="enkripDekripButton"
+              type="button"
+              onclick="algoritmaRC4()"
+              name="enkripDekripButton"
+              class="px-5 py-2 bg-primary text-lg tracking-widest text-white font-medium rounded-md hover:bg-opacity-80"
+            >
+              Enkripsi/Dekripsi
+            </button>
+            <!-- CLEAR BUTTON -->
+            <button
+              id="clearButton"
+              type="button"
+              name="clearButton"
+              value="clear"
+              class="px-5 py-2 bg-red-600 text-lg tracking-widest text-white font-medium rounded-md hover:bg-opacity-80"
+            >
+              Clear
+            </button>
+          </div>
+
+          <hr class="mb-6 border-2 border-slate-500" />
+
+          <!-- Hasil -->
+          <div class="mb-5">
+            <h6 class="w-full block text-xl font-semibold text-dark mb-2">
+              Hasil
+            </h6>
+            <textarea
+              id="hasil"
+              class="w-full text-lg h-32 bg-slate-300 p-3 text-dark rounded-md resize-none"
+              readonly
+            ></textarea>
+          </div>
+          <div class="mt-14 mb-8">
+            <p class="text-center text-lg font-semibold text-dark">
+              &copy; 2024. Fajar Nurdiansyah
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
