@@ -7,34 +7,34 @@
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
     <title>Kriptografi - RC4</title>
   </head>
-  <body class="bg-no-repeat bg-cover bg-center">
+  <body class="bg-fixed min-h-screen w-full">
     <div
       class="flex justify-center items-center w-full h-20 bg-transparent backdrop-brightness-50 backdrop-blur-md shadow-xl fixed top-0 z-10"
     >
-      <h1 class="my-auto text-primary text-4xl font-bold italic">
+      <h1 class="my-auto text-primary text-2xl font-bold italic sm:text-4xl">
         <span class="text-slate-200">ENKRIPSI</span> DEKRIPSI
       </h1>
     </div>
 
     <div
-      class="container mx-auto my-36 flex justify-center items-center flex-wrap W-1/2"
+      class="container mx-auto my-36 flex justify-center items-center flex-wrap"
     >
       <!-- CARD -->
       <div
         id="card"
-        class="w-full lg:w-1/2 md:w-4/5 mx-4 bg-sate-300 px-10 pt-10 rounded-xl shadow-2xl"
+        class="w-full md:w-4/5 lg:w-3/5 mx-2 bg-sate-300 px-5 pt-10 rounded-xl shadow-2xl sm:px-10"
       >
         <div>
           <img
             src="img/logo.png"
             alt="lock-logo"
-            class="w-52 h-52 mx-auto mt-6 object-cover scale-90"
+            class="w-40 h-40 mx-auto mt-6 object-cover scale-90 sm:w-52 sm:h-52"
           />
-          <h1 class="text-3xl font-bold text-primary text-center">
+          <h1 class="text-2xl sm:text-3xl font-bold text-primary text-center">
             <span class="text-dark">Kriptografi</span> RC4
           </h1>
           <p
-            class="text-lg font-extralight text-dark text-center mt-3 mb-10 opacity-80"
+            class="text-base sm:text-lg font-extralight text-dark text-center mt-3 mb-10 opacity-80"
           >
             Ayo kawan 🤙, lindungi pesan anda dengan enkripsi RC4!
           </p>
@@ -45,7 +45,7 @@
             <!-- PESAN INPUT -->
             <label
               for="pesan"
-              class="w-full block text-xl font-semibold text-dark mb-2"
+              class="w-full block text-lg sm:text-xl font-semibold text-dark mb-2"
               >Pesan</label
             >
             <textarea
@@ -62,7 +62,7 @@
             <!-- KEY input -->
             <label
               for="key"
-              class="w-full block text-xl font-semibold text-dark mb-2"
+              class="w-full block text-lg sm:text-xl font-semibold text-dark mb-2"
               >Kunci</label
             >
 
@@ -90,7 +90,7 @@
               type="button"
               onclick="algoritmaRC4()"
               name="enkripDekripButton"
-              class="px-5 py-2 bg-primary text-lg tracking-widest text-white font-medium rounded-md hover:bg-opacity-80"
+              class="px-2 py-2 bg-primary text-sm tracking-widest text-white font-medium rounded-md hover:bg-opacity-80 sm:text-lg sm:px-5"
             >
               Enkripsi/Dekripsi
             </button>
@@ -100,7 +100,7 @@
               type="button"
               name="clearButton"
               value="clear"
-              class="px-5 py-2 bg-red-600 text-lg tracking-widest text-white font-medium rounded-md hover:bg-opacity-80"
+              class="px-2 py-2 bg-red-600 text-sm tracking-widest text-white font-medium rounded-md hover:bg-opacity-80 sm:text-lg sm:px-5"
             >
               Clear
             </button>
@@ -110,7 +110,7 @@
 
           <!-- Hasil -->
           <div class="mb-5">
-            <h6 class="w-full block text-xl font-semibold text-dark mb-2">
+            <h6 class="w-full block text-lg sm:text-xl font-semibold text-dark mb-2">
               Hasil
             </h6>
             <textarea
